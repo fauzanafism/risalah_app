@@ -5,6 +5,12 @@ class MainScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        actions: [
+          Padding(
+            padding: const EdgeInsets.only(right: 13),
+            child: Icon(Icons.settings),
+          )
+        ],
         backgroundColor: Color(0xff161718),
         title: Text(
           "Risalah",
@@ -16,6 +22,13 @@ class MainScreen extends StatelessWidget {
         shadowColor: Colors.transparent,
       ),
       backgroundColor: Color(0xff161718),
+      // bottomNavigationBar: BottomNavigationBar(
+      //   backgroundColor: Color(0xff2c2c2e),
+      //   items: const <BottomNavigationBarItem>[
+      //     BottomNavigationBarItem(icon: Icon(Icons.api_sharp), label: 'Home',  ),
+      //     BottomNavigationBarItem(icon: Icon(Icons.settings), label: 'Settings'),
+      //   ],
+      // ),
       body: Stack(
         children: [
           Container(
@@ -28,26 +41,91 @@ class MainScreen extends StatelessWidget {
                   width: double.infinity,
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(10),
-                      color: Colors.red),
+                      color: Color(0xff2c2c2e)),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Center(
                         child: Text(
                           '5 menit menjelang waktu maghrib, siap2 kuy!',
-                          style: TextStyle(color: Colors.white),
+                          style: TextStyle(color: Colors.white,),
                         ),
                       ),
                     ],
                   ),
                 ),
+
                 SizedBox(height: 20),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    // Hadits of the day
+                    Container(
+                      height: 120,
+                      width: (MediaQuery.of(context).size.width / 2) - 40,
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(10),
+                          color: Color(0xff7900ff)),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.end,
+                        children: [
+                          Align(
+                            alignment: Alignment.bottomLeft,
+                            child: Padding(
+                              padding:
+                                  const EdgeInsets.only(bottom: 10, left: 10),
+                              child: Text(
+                                'Hadits',
+                                style: TextStyle(
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 25),
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    SizedBox(
+                      width: 10,
+                    ),
+                    Container(
+                      height: 120,
+                      width: (MediaQuery.of(context).size.width / 2) - 40,
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(10),
+                          color: Color(0xff0082ff)),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.end,
+                        children: [
+                          Align(
+                            alignment: Alignment.bottomLeft,
+                            child: Padding(
+                              padding:
+                                  const EdgeInsets.only(bottom: 10, left: 10),
+                              child: Text(
+                                'Kultum',
+                                style: TextStyle(
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 25),
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+                SizedBox(
+                  height: 20,
+                ),
                 Container(
                   height: 50,
                   width: double.infinity,
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(10),
-                      color: Colors.red),
+                      color: Color(0xffff0566)),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
@@ -67,7 +145,7 @@ class MainScreen extends StatelessWidget {
                   width: double.infinity,
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(10),
-                      color: Colors.green),
+                      color: Color(0xff0082ff)),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
@@ -81,54 +159,7 @@ class MainScreen extends StatelessWidget {
                   ),
                 ),
                 SizedBox(height: 20),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    // Hadits of the day
-                    Container(
-                      height: 120,
-                      width: (MediaQuery.of(context).size.width / 2) - 40,
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(10),
-                          color: Colors.brown[300]),
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Center(
-                            child: Text(
-                              'Hadits',
-                              style: TextStyle(color: Colors.white),
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                    SizedBox(
-                      width: 10,
-                    ),
-                    Container(
-                      height: 120,
-                      width: (MediaQuery.of(context).size.width / 2) - 40,
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(10),
-                          color: Colors.grey),
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Center(
-                            child: Text(
-                              'Kultum',
-                              style: TextStyle(color: Colors.white),
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ],
-                ),
-                SizedBox(
-                  height: 20,
-                ),
+
                 Container(
                   height: 80,
                   width: double.infinity,
