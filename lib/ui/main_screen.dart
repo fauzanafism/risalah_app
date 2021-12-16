@@ -7,7 +7,7 @@ class MainScreen extends StatelessWidget {
       appBar: AppBar(
         actions: [
           Padding(
-            padding: const EdgeInsets.only(right: 13),
+            padding: const EdgeInsets.only(right: 16),
             child: Icon(Icons.settings),
           )
         ],
@@ -61,7 +61,7 @@ class MainScreen extends StatelessWidget {
                   children: [
                     // Hadits of the day
                     Container(
-                      height: 120,
+                      height: 150,
                       width: (MediaQuery.of(context).size.width / 2) - 40,
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(10),
@@ -90,7 +90,7 @@ class MainScreen extends StatelessWidget {
                       width: 10,
                     ),
                     Container(
-                      height: 120,
+                      height: 150,
                       width: (MediaQuery.of(context).size.width / 2) - 40,
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(10),
@@ -147,12 +147,16 @@ class MainScreen extends StatelessWidget {
                       borderRadius: BorderRadius.circular(10),
                       color: Color(0xff0082ff)),
                   child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
+                    mainAxisAlignment: MainAxisAlignment.end,
                     children: [
-                      Center(
-                        child: Text(
-                          'Waktu sholat',
-                          style: TextStyle(color: Colors.white),
+                      Align(
+                        alignment: Alignment.bottomLeft,
+                        child: Padding(
+                          padding: const EdgeInsets.only(bottom: 10, left: 10),
+                          child: Text(
+                            'Tilawah',
+                            style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold,fontSize: 25),
+                          ),
                         ),
                       ),
                     ],
@@ -167,12 +171,16 @@ class MainScreen extends StatelessWidget {
                       borderRadius: BorderRadius.circular(10),
                       color: Colors.green),
                   child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
+                    mainAxisAlignment: MainAxisAlignment.end,
                     children: [
-                      Center(
-                        child: Text(
-                          'Waktu sholat',
-                          style: TextStyle(color: Colors.white),
+                      Align(
+                        alignment: Alignment.bottomLeft,
+                        child: Padding(
+                          padding: const EdgeInsets.only(bottom: 10, left: 10),
+                          child: Text(
+                            'Ibadah',
+                            style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold,fontSize: 25),
+                          ),
                         ),
                       ),
                     ],
