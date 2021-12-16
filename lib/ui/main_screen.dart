@@ -39,7 +39,26 @@ class MainScreen extends StatelessWidget {
                     children: [
                       Center(
                         child: Text(
-                          '5 menit menjelang waktu maghrib',
+                          '5 menit menjelang waktu maghrib, siap2 kuy!',
+                          style: TextStyle(color: Colors.white),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                SizedBox(height: 20),
+                Container(
+                  height: 50,
+                  width: double.infinity,
+                  decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(10),
+                      color: Colors.red),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Center(
+                        child: Text(
+                          '3 hari lagi liqo nih!!',
                           style: TextStyle(color: Colors.white),
                         ),
                       ),
@@ -111,7 +130,26 @@ class MainScreen extends StatelessWidget {
                       ),
                     ),
                   ],
-                )
+                ),
+                SizedBox(height: 20,),
+                Container(
+                  height: 80,
+                  width: double.infinity,
+                  decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(10),
+                      color: Colors.green),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Center(
+                        child: Text(
+                          'Waktu sholat',
+                          style: TextStyle(color: Colors.white),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
               ],
             ),
           )
