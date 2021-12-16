@@ -5,26 +5,21 @@ class MainScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        flexibleSpace: Container(
-          // child: Text("Home", style: TextStyle(color: Colors.white, fontWeight: FontWeight.w700),),
-          decoration: BoxDecoration(
-              gradient: LinearGradient(
-                  end: FractionalOffset.topLeft,
-                  begin: FractionalOffset.bottomRight,
-                  colors: [Colors.blue, Colors.purple])),
+        backgroundColor: Color(0xff161718),
+        title: Text(
+          "Risalah",
+          style: TextStyle(
+              fontSize: 32,
+              fontFamily: "Montserrat",
+              fontWeight: FontWeight.w700),
         ),
-        title: Text("RISALAH"),
-        actions: [
-          Icon(Icons.person),
-          SizedBox(width: 20),
-          Icon(Icons.settings),
-          SizedBox(width: 15)
-        ],
+        shadowColor: Colors.transparent,
       ),
+      backgroundColor: Color(0xff161718),
       body: Stack(
         children: [
           Container(
-            margin: EdgeInsets.symmetric(horizontal: 30, vertical: 15),
+            margin: EdgeInsets.symmetric(horizontal: 30, vertical: 30),
             child: Column(
               children: [
                 // Countdown waktu sholat
@@ -131,7 +126,9 @@ class MainScreen extends StatelessWidget {
                     ),
                   ],
                 ),
-                SizedBox(height: 20,),
+                SizedBox(
+                  height: 20,
+                ),
                 Container(
                   height: 80,
                   width: double.infinity,
