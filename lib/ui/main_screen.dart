@@ -33,7 +33,7 @@ class MainScreen extends StatelessWidget {
         children: [
           Container(
             margin: EdgeInsets.symmetric(horizontal: 30, vertical: 30),
-            child: Column(
+            child: ListView(
               children: [
                 // Countdown waktu sholat
                 Container(
@@ -75,7 +75,7 @@ class MainScreen extends StatelessWidget {
                               padding:
                                   const EdgeInsets.only(bottom: 10, left: 10),
                               child: Text(
-                                'Hadits',
+                                'Jadwal',
                                 style: TextStyle(
                                     color: Colors.white,
                                     fontWeight: FontWeight.bold,
@@ -178,7 +178,7 @@ class MainScreen extends StatelessWidget {
                         child: Padding(
                           padding: const EdgeInsets.only(bottom: 10, left: 10),
                           child: Text(
-                            'Ibadah',
+                            'Hafalan',
                             style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold,fontSize: 25),
                           ),
                         ),
