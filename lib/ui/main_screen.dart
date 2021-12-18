@@ -1,11 +1,18 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:risalah_app/model/adzan.dart';
 
 class MainScreen extends StatelessWidget {
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         actions: [
+          Container(child: Center(child: FaIcon(FontAwesomeIcons.mosque))),
+          SizedBox(
+            width: 20,
+          ),
           Padding(
             padding: const EdgeInsets.only(right: 16),
             child: Icon(Icons.settings),
@@ -47,8 +54,10 @@ class MainScreen extends StatelessWidget {
                     children: [
                       Center(
                         child: Text(
-                          '5 menit menjelang waktu maghrib, siap2 kuy!',
-                          style: TextStyle(color: Colors.white,),
+                          Azan.getTime(),
+                          style: TextStyle(
+                            color: Colors.white,
+                          ),
                         ),
                       ),
                     ],
@@ -62,7 +71,7 @@ class MainScreen extends StatelessWidget {
                     // Hadits of the day
                     Container(
                       height: 150,
-                      width: (MediaQuery.of(context).size.width / 2) - 40,
+                      width: 150,
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(10),
                           color: Color(0xff7900ff)),
@@ -91,7 +100,7 @@ class MainScreen extends StatelessWidget {
                     ),
                     Container(
                       height: 150,
-                      width: (MediaQuery.of(context).size.width / 2) - 40,
+                      width: 150,
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(10),
                           color: Color(0xff0082ff)),
@@ -155,7 +164,10 @@ class MainScreen extends StatelessWidget {
                           padding: const EdgeInsets.only(bottom: 10, left: 10),
                           child: Text(
                             'Tilawah',
-                            style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold,fontSize: 25),
+                            style: TextStyle(
+                                color: Colors.white,
+                                fontWeight: FontWeight.bold,
+                                fontSize: 25),
                           ),
                         ),
                       ),
@@ -179,7 +191,10 @@ class MainScreen extends StatelessWidget {
                           padding: const EdgeInsets.only(bottom: 10, left: 10),
                           child: Text(
                             'Hafalan',
-                            style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold,fontSize: 25),
+                            style: TextStyle(
+                                color: Colors.white,
+                                fontWeight: FontWeight.bold,
+                                fontSize: 25),
                           ),
                         ),
                       ),
